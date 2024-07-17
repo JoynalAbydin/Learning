@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>calculation</title>
+</head>
+
+<body>
+  <header id="dynamicHeader" class="header-nav">
+    <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+    <script src="/learning/header-footer/global-header.js"></script>
+   </header>
+
+
+  <p style="text-align: justify; display: inline-flex;"> এখানে এই প্রোগ্রামে প্রত্যেকটি সংখ্যাকে একবার একবার করে যোগ করবে যার কারণে বড় ধরনের সংখ্যা এর যোগফল বের করতে চাইলে এটি সাধারণভাবে অনেক সময় নেবে অনেক সময় পেজটির লোড হবে না।।।</p>
+  <p style="display: inline-flex;">একই সাথে এই প্রগ্রামটি  সুত্রের মাধ্যমে করা হয়েছে যার কারনে এখানে বরো সংখ্যা দিলেও এটা সহজে উত্তর  <a href="/Learning JS/Calculators/test.html" style="color: blue;">হিসাব করুন</a></p> <br>
+<script src="sumLoop.js">sumLoop.js</script>
+<p style="text-align: center; background-color: blue;"><a href="loop.html">For Loop Functions</a></p>
+<button id="srcBtnId">Show Source code</button>
+<p id="contentId" style="display: none;">
+  var x = parseInt(prompt("Enter starting number: ")); <br>
+var y = parseInt(prompt("Enter ending number")); <br>
+<br>
+var sum = 0;<br>
+for (var i = 1; i <= 100; i = i + 1) //এখানে i এর মান ১ ধরে যোগ কার হেয়েছে <br>
+{
+ sum = sum + i;
+} <br>
+document.write(sum); <br><br>
+
+
+
+var jog = 0; <br>
+for (var j = x; j <= y; j = j + 1) //এখানে প্রথম (Prompt ইনপুট) x এর মান var = j এর মাঝে রাখা হয়েছে। j যতক্ষন y এর সমান না হবে ততক্ষ এই লুপটা চলবে। <br>
+{
+  jog = jog + j;
+} <br>
+document.write("Your Result is = "+jog);</p>
+<footer id="dynamicFooter"></footer>
+</body>
+</html>

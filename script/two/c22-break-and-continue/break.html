@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brake </title>
+</head>
+
+<body>
+  <header id="dynamicHeader" class="header-nav">
+    <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+    <script src="/learning/header-footer/global-header.js"></script>
+   </header>
+
+
+  <h1>Loop break and continue </h1>
+
+<script src="break.js"></script>
+<button id="srcBtnId"> Show Source Code </button>
+<div id="contentId" style="display: none;">
+    <p>for (var i = 1; i <= 100; i++) <br>{
+      if (i==10) <br>
+      break;  <br>
+       document.write(' '+i);} <br><br>
+       // if == 10, লুপ কোথায় শেষ হবে তা  ইফ এর মাধ্যমে Assain হয়েছে। <br>
+       // if we use thise break before print, so its don’t print 10(but if we use thise break after print command it write with 10)
+       </p>
+       <p> for (var x = 1; x <= 100; x++) { <br>
+        document.write(' '+x); <br>
+        if (x==10) { <br>
+          break; <br>
+        }} 
+       <br> যেহেতু এখানে আগে ভেলু প্রিন্ট করা হয়েছে, সেজন্য এখানে 10 আগে প্রিন্ট হবে, তারপর লুপটা ব্রেক হবে।
+      </p>
+</div>
+<br><footer id="dynamicFooter"></footer>
+
+</body>
+</html>

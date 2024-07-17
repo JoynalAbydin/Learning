@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Array Methods</title>
+</head>
+<body>
+  <header id="dynamicHeader" class="header-nav">
+    <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+    <script src="/learning/header-footer/global-header.js"></script>
+   </header>
+
+  <h1>Some Array Methods</h1>
+
+<script src="arraymethod.js"></script>
+
+<div id="srcBtnId"><button> View Source Code </button></div>
+<div id="contentId" style="display: none;">
+    <p>var names = ['ashik','anis','kabir','Abul']; <br> <br>
+
+      //names.push('joy');  <br>
+      //add something in last <br> <br>
+      
+      //names.pop();  <br>
+      //minus something on last <br> <br>
+      
+      
+      //remove name/itm in frist in array <br>
+      //names.shift(); <br> <br>
+      
+      //add name/itm in frist in array <br>
+      //names.unshift('ruble'); <br> <br>
+      
+      
+      //splice methods নির্দিষ্ট ইনডেক্স হতে কোন সংখ্যা যোগ বা বা দেওয়া <br>
+      //names.splice(1,0,'Joy'); <br>
+      //এখানে 1,0- 1 Number index ar পর একটা নাম সংযুক্ত হবে। এবঙ 1,0,- 0 এর কারনে 1 Number index এর পর ০ ন্ম রিমোভ হবে।  <br>
+      // এখানে ০ এর পরিবর্তে ১ বা যেই সংখ্যা দিবো, selected index 1,0- ততটা নাম বাদ যাবে। <br> <br>
+      
+      
+      //slice মূল এরে অপরিবর্তিত বেখে, নতুন এরেতে কাজ করা যাবে, পুরাতন এরের ইন্ডেক্স নিয়ে। আরো জানতে হবে  <br>
+      // var name = names.slice(1,2);  <br> <br>
+      
+      
+      //sort method অনুযায়ী a-z index কে সাজানো <br>
+      var name = names.sort(); <br>
+      name.reverse(); //z-a সাজানো</p>
+</div>
+<br><footer id="dynamicFooter"></footer>
+</body>
+
+</html>

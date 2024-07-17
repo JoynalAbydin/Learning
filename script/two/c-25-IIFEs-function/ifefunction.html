@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IIFEs Function</title>
+</head>
+
+<body>
+  <header id="dynamicHeader" class="header-nav">
+    <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+    <script src="/learning/header-footer/global-header.js"></script>
+   </header>
+
+  <h1>IIFEs Function</h1>
+<p>Immediately Invoked Function Expression</p>
+<p> একটি ফাংশন  তৈরি করে এটাকে সাথে সাথে প্রিন্ট করার জন্য এই অপশনটি ব্যবহার করা হয় </p>
+<script src="ifefunction.js"></script>
+<h1>Immediately Invoked Function Expression</h1>
+
+<div id="srcBtnId" style="text-align: center;"><button> View Source Code </button></div>
+<div id="contentId" style="display: none;">
+    <p>//iifes function <br>
+      (function imi(x,y) { <br>
+      var xy = x*y; <br>
+      document.write(xy); <br>
+      })(10,20); <br>//এখানে সাধারন ভাবে ফাংশন তৈরি করা হয়েছে, যা ইমেডিয়েট কলের জন্য সম্পূর্ণ ফংশনকে ()এর মধ্যে রাখা হয়েছে। এবং শেষে ( )এর মধ্যে প্যারামিটার x,y এর মান বসানো হয়েছে। <br>
+      </p>
+      <p>//function expression <br>
+        var show = function display () { <br>
+          document.write('This is Example of function expression') <br>
+        }
+        show();</p>
+        <p>//my experiment <br>
+          var calculator = function calculation (x,y) { <br>
+          var sum = x+y; <br>
+          var sub = y-x; <br>
+          var gun = x*y; <br>
+          document.write('This is another example for function expression with sum, sub <br>');
+          document.write('Sum = '+sum+'<br>Sub = '+sub+'<br> Gun = '+gun);
+          }
+          calculator(10,30);</p>
+</div>
+
+<br><footer id="dynamicFooter"></footer>
+</body>
+
+</html>
