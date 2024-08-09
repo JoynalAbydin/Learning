@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Array</title>
+</head>
+
+<body>
+  <header id="dynamicHeader" class="header-nav">
+    <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+    <script src="/learning/header-footer/global-header.js"></script>
+   </header>
+
+  <h1>What is Array</h1>
+  <p>এরে কি কিভাবে কাজ করে এর বিস্তারিত </p>
+<p>অনেগুলো ভেরিএবেল সহজে একসাথে, ক্রিয়েট করা যায়</p>
+<script src="array.js"></script>
+
+<p>var n = new Array(3); //array start with 0 index, এরের  দেওয়া বাধ্যতামূলক নয়। <br>
+  n[0]= 'Manik'; <br>
+  n[1]= 'Helal'; <br>
+  n[2]= 'Rupom'; <br>
+  n[3]= 'aizak'; <br>
+  document.write(n); //for all value <br>
+  //we can print specific arry by call <br>
+  // document.write(n[2]); <br>
+  console.log(n.length); //এরের সাইজ জানতে এটা লিখে কনসোলে গেলে array এর সাইজ জানা  যাবে।
+</p>
+
+  <div id="srcBtnId" style="text-align: center;"><button> View Source Code </button></div>
+<div id="contentId" style="display: none;">
+    <p>//সাধারন ভাবে var তৈরি করার পদ্ধতি <br>
+      var n1,n2,n3,n4 <br>
+      n1 = 'Joynal'; <br>
+      n2 = 'Jahid'; <br>
+      n3 = 'Anamul'; <br>
+      n4 = 'Alamin';</p>
+      <p>//Simple way to make array <br>
+        var names = ['','Aizakur','Helal','Jabed']; <br>
+        //এখন সাধারন ভাবে এটাকে প্রিন্ট করা যাবে। এখানে প্রথম 'স্ট্রিং' এর মধ্যে যা থাকবে এটা হবে 0 index. <br>
+        document.write(names[0]); //কিছু প্রিন্ট করবে না কারন 0 ইনডেক্সে কিছু রাখা হয়নি।</p>
+        <p>//push function যা কোন Array এর শেশে নতুন করে কোন নাম সংযোজন করতে ব্যাবহার করা হয়। <br>
+          names.push('Kawser'); <br>
+          //console.log(names.length); //after push  name</p>
+          <p>//concat দুটি এরেকে সংযুক্ত করতে ব্যাবহার করা হয় এই concat  function  <br>
+            var test = n.concat(names);<br>
+            console.log(test);</p>
+</div>
+
+<br><footer id="dynamicFooter"></footer>
+</body>
+
+</html>

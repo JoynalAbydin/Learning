@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traditional Function</title>
+</head>
+
+<body>
+  <header id="dynamicHeader" class="header-nav">
+    <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+    <script src="/learning/header-footer/global-header.js"></script>
+   </header>
+
+<h1>Traditional Function</h1>
+<p>ফাংশন কি, এটি কিভাবে কাজ করে বিস্তারিত</p>
+<p>অনেকগুলো কাজ যা বারবার করা দরকার, এমনকাজ সহজে করার জন্য ফাংশন ব্যাবহার করা হয়।</p>
+<p>//সাধারন ভাবে যখন কোন কাজ করি, যেমন যোগ বিয়োগ ইত্যাদি। <br>
+//যোগ এর জন্য একটা উদাহরণ <br>
+var x = 10; <br>
+var y = 15; <br>
+var sum = x+y; <br>
+document.write('Result = '+sum);</p>
+<script src="function.js"></script>
+<div id="srcBtnId"><button> View Source Code </button></div>
+<div id="contentId" style="display: none;">
+    <p><b>//Normally Function </b> <br>
+      function calculate() { //function name of function () { function body and close} <br>
+      var sq = 20; //function value  <br> 
+      var sqr = sq*sq; //function কি কাজ করবে <br>
+      document.write('square = '+sqr+''); //কি প্রিন্ট হবে তাবলে দেওয়া <br>
+      }
+      calculate(); //ফাংশন কে কল দেওয়া হয়েছে।</p>
+    <p><b>//ফাংশন with প্যারামিটার</b> <br> 
+        function calculator (x,y,z) //function name ar vitor দুইটা প্যারামিটার x, y ও z নেওয়া হয়েছে। <br> 
+        { 
+        var sub = x+y+z; <br> 
+        document.write('Sub = '+sub+'<br>')
+        }
+        calculator(10,20,30); //ফাংশন কলের সময় প্যারামিটার এর মান বসিয়ে দিয়েছি <br> 
+        calculator(100,200,300);</p>
+    <p> <b>//return function2 </b> <br>
+      function cal(a,b,c) { //function with parameter <br>
+      var sub2 = a+b+c; //function works <br>
+      return sub2; //return function sub2 <br>
+      }
+      var abc = cal(5,10,15); //parameter valu under abc <br>
+      document.write(abc); //print function, we can directly print above function method </p>
+</div>
+<br><footer id="dynamicFooter"></footer>
+</body>
+
+</html>

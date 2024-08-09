@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practice.css">
+    <title>Best Practice in Javascript</title>
+</head>
+<body>
+    <header id="dynamicHeader" class="header-nav">
+        <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+        <script src="/learning/header-footer/global-header.js"></script>
+       </header>
+ <h1>Best Practice in Javascript</h1>
+<h3>var Example</h3>
+<pre>// Using var:
+    // যখন প্রোগ্রামের বিভিন্ন জায়গায় একই নামের ভেরিয়েবল ব্যবহার করতে হবে
+    // বা ভেরিয়েবলের স্কোপের সাথে সম্পর্কে আগের জ্যাকুরিয়াস থাকতে হবে।
+    
+    var x = 10;
+    var y = 20;
+    
+    function add() {
+        var result = x + y;
+        console.log(result);
+    }
+    
+    add(); // Output: 30
+    
+    // Using let:
+    // যখন একটি ভেরিয়েবলের স্কোপ নিজের ব্লকের মধ্যে রাখতে হবে, এবং যেটা ব্লকের বাইরে ব্যবহৃত হবে না
+    
+    if (true) {
+        let message = "Hello";
+        console.log(message); // Output: "Hello"
+    }
+    
+    console.log(message); // Error: message is not defined
+    
+    // Using const:
+    // যখন একটি ভেরিয়েবলের মান পরিবর্তন হবে না বা যদি মান পরিবর্তন হয় তখন এর মান পরিবর্তন হবে না।
+    
+    const PI = 3.1416;
+    PI = 3.14; // Error: Assignment to constant variable.
+    </pre>
+    <p> যখন ভেরিয়েবলের মান পরিবর্তন হবে না বা পরিবর্তনের সম্ভাবনা কম থাকবে, তখন কন্স্ট ব্যবহার করা উচিত। যেখানে মান পরিবর্তনের সম্ভাবনা বেশি তারকে let দিয়ে ডিক্লেয়ার করা উচিত। var দ্বারা ভেরিয়েবল ডিক্লেয়ার করার সময় তা প্রোগ্রামের শুরু থেকে সম্পর্কে হয়ে যায়।</p>
+ <h3>var:</h3>
+ <p>var ব্যবহার করা হয় যখন ভ্যারিয়েবলটির মান পরিবর্তন হতে পারে এবং স্কোপ লেভেল গ্লোবাল অথবা ফাংশন লেভেল হতে পারে। যেহেতু var এর স্কোপ ব্লক লেভেল নেই, তার সংজ্ঞার জন্য সম্ভবত গ্লোবাল স্কোপে এক্সেসের সমস্যা থাকতে পারে। এটির ব্যবহার সীমানা গুলো অধিক মধ্যবর্তী এবং কোডের শেষে ঘোষণা হয়ে থাকে।</p>
+ <pre>var x = 10; // Global variable
+    function example() {
+        var y = 20; // Local variable
+        console.log(x); // Accessible
+        console.log(y); // Accessible
+    }
+    console.log(x); // Accessible
+    console.log(y); // Uncaught ReferenceError: y is not defined
+    </pre>
+    <h3> let: </h3>
+    <p>let ব্যবহার করা হয় যখন ভ্যারিয়েবলটির মান পরিবর্তন হতে পারে এবং স্কোপ লেভেল ব্লক লেভেল হতে পারে। এটি var এর অনুপ্রযুক্ততাগুলির অনুসরণ করে, ক্রমাগত ভার্সনে তৈরি হয়েছিল let যেহেতু ব্লক স্কোপ লেভেলের সীমা সঠিকভাবে মেনে নিতে।</p>
+    <pre>let x = 10; // Block-scoped variable
+        if (true) {
+            let y = 20; // Block-scoped variable
+            console.log(x); // Accessible
+            console.log(y); // Accessible
+        }
+        console.log(x); // Accessible
+        console.log(y); // Uncaught ReferenceError: y is not defined
+        </pre>
+        <h3>const: </h3>
+    <p>const একটি ধ্বংস ভ্যারিয়েবল হিসেবে ব্যবহার হয়, যার মান পরিবর্তন হতে পারে না। এটি অধিক পরিবর্তনশীল মানের জন্য ব্যবহৃত হয়, যেমন কন্সট্যান্ট, ধ্বংসভাবে সংজ্ঞায়িত মান, কোডের নির্দিষ্ট সেগমেন্টের সাথে যোগ্যতা সংরক্ষণ করার জন্য।</p>
+    <pre>const PI = 3.1416; // Constant variable
+        PI = 22/7; // Error: Assignment to constant variable
+        </pre>
+    <p>উপরের উদাহরণগুলি মূলত ভ্যারিয়েবল ডিক্লারেশনের বিভিন্ন পরিস্থিতি প্রদর্শন করে এবং কোডের ভিত্তিতে যেকোনো নির্দিষ্ট ভ্যারিয়েবলের ব্যবহারের সঠিক সুপারিশ করে। সাধারণত, var এর ব্যবহার কম প্রয়োজনীয়, let এবং const এর ব্যবহার একান্তভাবে সুপারিশ করা হয়, কারণ এগুলি স্কোপের সুরক্ষা সঙ্গে বিভিন্ন ভ্যারিয়েবল মানের উত্তরাধিকার সুনিশ্চিত করে। যদিও, এগুলি সঠিকভাবে ব্যবহার করার জন্য স্বার্থবর।</p>
+<h3>Other</h3>
+ <pre>// Function to perform calculation
+    function calculate(number1, operator, number2) {
+        let result;
+        
+        // Check if inputs are valid numbers
+        if (isNaN(number1) || isNaN(number2)) {
+            return 'Invalid input';
+        }
+        
+        // Perform calculation based on operator
+        switch(operator) {
+            case '+':
+                result = number1 + number2;
+                break;
+            case '-':
+                result = number1 - number2;
+                break;
+            case '*':
+                result = number1 * number2;
+                break;
+            case '/':
+                // Check for division by zero
+                if (number2 === 0) {
+                    return 'Division by zero error';
+                }
+                result = number1 / number2;
+                break;
+            default:
+                return 'Invalid operator';
+        }
+        
+        return result;
+    }
+    
+    // Example usage
+    console.log(calculate(5, '+', 3));  // Output: 8
+    console.log(calculate(10, '/', 2)); // Output: 5
+    console.log(calculate(4, '*', 0));  // Output: 0
+    console.log(calculate(8, '-', 'abc')); // Output: 'Invalid input'
+    console.log(calculate(10, '/', 0)); // Output: 'Division by zero error'
+    console.log(calculate(5, '%', 3));  // Output: 'Invalid operator'
+    </pre>
+ <script src="practice.js"></script>
+  <!--Footer Menu start here-->
+  <footer id="dynamicFooter"></footer>
+</body>
+</html>

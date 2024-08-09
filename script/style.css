@@ -1,0 +1,15 @@
+body {
+    font-size: 15pt;
+    background: cyan;
+    /* max-width: 600px;
+    margin: auto; */
+}
+
+#xxx {text-align: center;
+  background-color: black;
+  padding: 10px;
+  color: white;
+}
+
+#xx {text-align: justify;}
+

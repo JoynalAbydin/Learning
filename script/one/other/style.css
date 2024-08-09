@@ -1,0 +1,13 @@
+#headerManu{
+  display: inline-flex;
+  background: green;
+  padding: 08px;
+}
+#headerManu a{
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+#subManu {
+  background: dimgray;
+}

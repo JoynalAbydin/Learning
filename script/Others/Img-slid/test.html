@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NID</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center;">NID</h1>
+
+<div id="content" class="hidden">
+   <h1>Welcome to the Password Protected Page!</h1>
+  <p>NID- Most: Jannatun Tazrin</p>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEje_0082OoGmr_w7-EhdluzPANP0cnsQO2pzlygxKOP9rZGWK0YzATyzJjh4CjeH2wFkBBcUngsCWrPl2t6yRhY5t0N_xVTCAavPXx5Tnr_nuJEjTrGo31ANsri7Cenwcp0BrLVNhQWUYxtzK4UBTcvKkBSF-_F6EIJI_-4MiqyNtH5wn6SEjhOSMwlsqYX/s4677/NID%20Jannat_2.jpg" alt="Demo Nid">
+</div>
+
+<script>
+    const correctPassword = "817936";
+    function checkPassword() {
+        const enteredPassword = document.getElementById("password").value;
+
+        if (enteredPassword === correctPassword) {
+            document.getElementById("passwordForm").classList.add("hidden");
+            document.getElementById("content").classList.remove("hidden");
+        } else {
+            document.getElementById("error").innerHTML = "Incorrect password. Please try again.";
+        }
+    }
+</script>
+
+<div id="passwordForm">
+    <!-- Password form -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <button onclick="checkPassword()">Submit</button>
+    <div id="error" style="color: red;"></div>
+</div>
+
+
+</body>
+</html>

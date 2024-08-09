@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kilometer Converter</title>
+</head>
+
+<body>
+  <header id="dynamicHeader" class="header-nav">
+    <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+    <script src="/learning/header-footer/global-header.js"></script>
+   </header>
+
+  <h1>Kilometer Converter</h1>
+  <p>এখানে কিলোমিটার থেকে মাইল কনভার্ট একই সাথে মাইল থেকে কিলোমিটার কনভার্ট হরা যাবে</p>
+  <p>এই পেজে প্রবেশের পর আপনাকে ইনপুট দেওয়ার ঘর আসবে। যেখানে আপনি যেকোনো সংখ্যা ইনপুট  দিলে এটি Kilometre To Mile = .... 
+     Mile To Kilometre = .... দুই ভাবেই আপনার রেজাল্ট দেখাবে। </p>
+     <p>আপনি যদি ইনপুট দেওয়ার অপশন না পান তাহলে পেজটি রিফ্রেশ করুন তাহলে আবার ইনপুট দেওয়ার অপশন আসবে।</p>
+ 
+<p><b>আপনার প্রদত্ত সংখ্যার ফলাফল </b></p>
+<script src="km-mi.js">km-mi.js</script>
+<h2>সুত্র এবং সোর্স কোড দেখুন</h2>
+
+<button id="showContentBtn">Show Source Code</button>
+<div id="content" style="display: none;">
+    <p>var km = parseFloat(prompt("Enter km or ml: ")); <br>
+      var k2m = km*0.62137119; //কিলোমিটার থেকে মাইল বের করার সুত্র <br>
+      document.write("Kilometre To Mile = "+ k2m.toFixed(2)+"<br>");<br>
+      var m2k = km*1.609344;  //মাইল থেকে কিলোমিটার বের কার সুত্র<br>
+      document.write("Mile To Kilometre = "+m2k.toFixed(2));</p>
+</div>
+<br><footer id="dynamicFooter"></footer>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="drf.css">
+    <title>default and rest parameters in javascript</title>
+</head>
+<body>
+    <header id="dynamicHeader" class="header-nav">
+        <link rel="stylesheet" href="/learning/header-footer/global-styles.css">
+        <script src="/learning/header-footer/global-header.js"></script>
+       </header>
+  <h1>default and rest parameters in javascript</h1>  
+  <div id="srcBtnId" style="text-align: center;"><button> View Source Code </button></div>
+<div id="contentId" style="display: none;">
+  <pre>"use strict"
+
+    //example of default parameter
+    function message(text='Hello Everyone') {
+        console.log(text);
+    }
+    message(); 
+    message("love js es6");
+    
+    
+    
+    //example of rest parameter
+    function printNumbers(x,y, ...z){
+        console.log(`x = ${x}, y = ${y}, z= ${z}`)
+    }
+    printNumbers(10,20,30,40,50);</pre></div>
+    
+    <script src="drf.js"></script>
+  <!--Footer Menu start here-->
+  <footer id="dynamicFooter"></footer>
+</body>
+</html>

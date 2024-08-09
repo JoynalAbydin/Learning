@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <p id="clock">Time is: </p>
+
+    <script>
+        function nDate() {
+            var cDate = new Date();
+            document.getElementById('clock').innerHTML = cDate;
+        }
+
+        // Call the function once to display the current date and time immediately
+        nDate();
+
+        // Call the function repeatedly every second using setInterval
+        setInterval(nDate, 1000);
+    </script>
+</body>
+</html>

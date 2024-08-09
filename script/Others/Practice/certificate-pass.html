@@ -1,0 +1,98 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
+    <title>Certificates</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        span{
+            margin-right: 55px;
+        }
+
+    .c-button button{
+        text-align: center;
+        border: 2px solid #0381f7;
+        color: #ffffff;
+        background-color: #003a0a;
+        font-size: 25px;
+    }
+
+    </style>
+</head>
+<body>
+ <h1>Welcome</h1>
+  <div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhW2psqhyphenhyphenLjeymhRTR-nyVOqrVu9HY_Rc6ryfy_Iw85R2MQVXj6kRhYn8Wj8Lj2asFD4i80HnykVTVYdA3FWXqB2Wp8xKRUwEvqFsqzD-Pg73FZsFfqUC4mb0ZWygfKi0ex112QLlOkeMs2lEZfhDqng5Ceo6SEjs3n196fP3cUiOi7rwa6Rf5bXtwrguE/s1600/Certificate.PNG" style="display: block; padding: 1em 0; text-align: center; "><img alt="" border="0" data-original-height="365" data-original-width="841" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhW2psqhyphenhyphenLjeymhRTR-nyVOqrVu9HY_Rc6ryfy_Iw85R2MQVXj6kRhYn8Wj8Lj2asFD4i80HnykVTVYdA3FWXqB2Wp8xKRUwEvqFsqzD-Pg73FZsFfqUC4mb0ZWygfKi0ex112QLlOkeMs2lEZfhDqng5Ceo6SEjs3n196fP3cUiOi7rwa6Rf5bXtwrguE/s1600/Certificate.PNG"/></a></div><br>
+  If This is So important documents You Need Frist veryfy its thats you. Enter your mixed password and see this documents.
+  
+<script>
+    // Define the correct password
+    const correctPassword = "817936";
+
+    // Function to check the entered password
+    function checkPassword() {
+        const enteredPassword = document.getElementById("password").value;
+
+        if (enteredPassword === correctPassword) {
+            // If correct, display the protected content
+            document.getElementById("passwordForm").classList.add("hidden");
+            document.getElementById("content").classList.remove("hidden");
+        } else {
+            // If incorrect, display an error message
+            document.getElementById("error").innerHTML = "Incorrect password. Please try again.";
+        }
+    }
+
+    const certificates = ["https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhObWapTyPOL6guUf5voNFOVuxu2c-6GaHxI60bPO6FPUuIoLa9_TBsQ8aSZMG43V1uG_IGYB5Cs_cAGjiToOi11kuCgKL2cp_tA7gib9NUxvGa4H3MlWh1A5AhCCbv72nJdx7rn35jf5D6tqRr6HHw01g4F_SftqS8LT28uGJdfeWk_0YHrpp0RyuTf7CG/s4160/IMG20231130183530.jpg","https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNueN7y3pGnH2J219GKnBDlxVOKUFWDofIdCDTd8nfzPW5poFUwMQL6GgRMx63srAEM0hG8rK-qsNAz2qXIQuOIHA1c7Ho4ZvnUnRXSv0sElopTwWrIIu1sAooaxGS9m8NjQgR3BkVkuvuzPDNtD4kA3_Hr902XlY4y5bUXphQxL_XYWNILw3pQAU1k9U1/s4160/IMG20231130183501.jpg","https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKrTMEf0xOvNkEn9vGovzB2b3gjzQyVTtWPb31_XrvdbVWUT6SjSlym1J3MrKi1iAM13JafQ-q5VtzMemot1sw7x4HdNyMtC6B7oRJ8u2LzeGDepUmH2T3DvJ73A0ivj2G-4kppmJai9Y9jivGdXs8fEn2-hLU_KB_pFKSXsAIYtSZ5G0yfthr5a5QPoWd/s4160/IMG20231130183433.jpg","https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj9CazadPRYA5tY308gz_yoAizBvWJ2JSprgnBR-5maH6-vTrljXafp22YfA8boNlUNSzdObqt3HD8g5gqWD0Xf0y5qvCuFSGW5fuIVWFdb1iPHtBwr63CQ6PGb5n2YgNlDFHIYwkdaLXPLyJnkJ_Cf73JjlXwVrziqSk8ao3PPdij9IAFTQT6FnNb5P5l6/s1279/IMG-20230816-WA0002.jpg","#"];
+
+
+function jsc(){
+    document.getElementById('certificates').src = certificates[0]
+}
+function ssc(){
+    document.getElementById('certificates').src = certificates[1]
+}
+function hsc(){
+    document.getElementById('certificates').src = certificates[2]
+}
+function hscPhotocopy(){
+    document.getElementById('certificates').src = certificates[3]
+}
+
+</script>
+
+<div id="passwordForm">
+    <!-- Password form -->
+    <label for="password">Password:</label>
+    <input id="password" required="" type="password" />
+    <button onclick="checkPassword()">Submit</button>
+    <div id="error" style="color: red;"></div>
+</div>
+
+<div class="hidden" id="content">
+    <!-- Content to display after entering the correct password -->
+    <h1>Welcome Click Button To See Certicicate</h1>
+    <div>
+        <p><img id="certificates" src="" alt=""></p>
+    </div>
+
+    <div class="c-button"> 
+        <button onclick="jsc()">JSC</button> 
+        <span></span>
+        <button onclick="ssc()">SSC</button>
+        <span></span>
+        <button onclick="hsc()">HSC</button>
+        <span></span>
+        <span><br><br></span>
+        <button onclick="hscPhotocopy()">HSC Photocopy</button>
+        <span></span>
+    </div>
+</div>
+</body>
+</html>

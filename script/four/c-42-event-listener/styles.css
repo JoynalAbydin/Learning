@@ -1,0 +1,22 @@
+.cls{
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+}
+
+.ex2{
+  background: black;
+  color: white;
+  font-size: 25px;
+}
+
+.example3{
+  background: rgb(3, 168, 197);
+  color: rgb(0, 0, 0);
+  font-size: 29px; 
+}
+h2{
+  text-align: center;
+}
